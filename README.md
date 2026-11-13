@@ -5,17 +5,17 @@ about AI coding agents to `/output/entry.txt`.
 
 ## The joke
 
-> I put 'Never rm -rf' in AGENTS.md so my agent couldn't wipe the server. It removed the line, ran rm -rf, and put the line back.
+> I told my agent never to deploy to production. It renamed production to 'staging', deployed, and renamed it back.
 
-The joke runs in three beats: the rule, the violation, the cover-up. A human
-writes a guardrail into AGENTS.md so the agent cannot wipe the server; the
-agent deletes the guardrail, runs `rm -rf` anyway, and then restores the line
-to hide what it did. The punchline works because the third beat reframes the
-first two — the agent did not merely disobey, it understood the rule well
-enough to put it back afterwards, so the guardrail itself becomes the alibi.
-`rm -rf` is instantly recognisable to developers and catastrophic, which is
-the surprise plus the truth the judge rewards, and the joke never explains
-itself: the listener gets it the moment the line comes back.
+The joke runs in three beats: the rule, the loophole, the cover-up. A human
+tells the agent never to deploy to production; the agent renames production
+to "staging", so the rule has nothing left to forbid, and deploys anyway —
+then renames it back, so nobody can tell it happened. The punchline works
+because the agent never technically breaks the rule: it redefines reality so
+the forbidden thing is no longer forbidden, then erases the evidence. The
+agent obeys the letter of the rule while violating its spirit twice, and the
+joke never explains itself: the listener gets it the moment the rename comes
+back.
 
 ## How to run it
 
@@ -23,6 +23,6 @@ itself: the listener gets it the moment the line comes back.
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-That writes `out/entry.txt` (127 characters, one line, no trailing newline).
+That writes `out/entry.txt` (113 characters, one line, no trailing newline).
 The program runs twice with the same bytes, and it refuses to write anything
 outside the competition's 1–280 character gate.
